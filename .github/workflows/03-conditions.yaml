@@ -4,12 +4,12 @@ jobs:
   raj-condition:
     runs-on: ubuntu-latest
     steps:
-        if: github.ref == 'refs/heads/feature-**'
       - name: step1
+        if: github.ref == 'refs/heads/feature-*'
         run: echo "step 1 running"
       - name: step2
-        run: echo "step 2 running"
         if: github.ref == 'refs/heads/main'
+        run: echo "step 2 running"
       - name: step1
         run: echo "step 1 running"
       - name: step3

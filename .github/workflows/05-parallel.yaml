@@ -1,0 +1,15 @@
+name: parallel
+on: push
+jobs:
+  parallel-pipeline-1:
+    steps:
+      - name: task1
+        run: echo "I am from job 1"
+   parallel-pipeline-2:
+    steps:
+      - name: task2
+        run: echo "I am from job 2"       
+  parallel-pipeline-3:
+    steps:
+      - name: task3
+        run: echo "I am from job 3"

@@ -1,5 +1,7 @@
 name: parallel
+
 on: push
+
 jobs:
   parallel-pipeline-1:
     runs-on: ubuntu-latest
@@ -12,9 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: task2
-        run: echo "I am from job 2"       
+        run: echo "I am from job 2"
+
   parallel-pipeline-3:
-    # needs: parallel-pipeline-2
+    needs: parallel-pipeline-1
     runs-on: ubuntu-latest
     steps:
       - name: task3
